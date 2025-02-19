@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body oncontextmenu="return false;">
+    <div class="container">
+      <h1>Todo App</h1>
+      <form id="todo-form">
+        <div class="form-group">
+          <label for="todo-input">Task:</label>
+          <input type="text" id="todo-input" required placeholder="Enter your todo" />
+        </div>
+        <div class="form-group">
+          <label for="priority-select">Priority:</label>
+          <select id="priority-select">
+            <option value="High">High</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subject-select">Subject:</label>
+          <select id="subject-select">
+            <option value="STATISTICS">STATISTICS</option>
+            <option value="MATHEMATICS">MATHEMATICS</option>
+            <option value="ECONOMICS">ECONOMICS</option>
+          </select>
+        </div>
+        <div class="form-group" id="add-subject-group">
+          <label for="new-subject">Add New Subject:</label>
+          <input type="text" id="new-subject" placeholder="Enter new subject" />
+          <button type="button" id="add-subject-btn" class="btn">Add Subject</button>
+        </div>
+        <div class="form-group" id="subsubject-group">
+          <label for="subsubject-select">Select Sub-Subject:</label>
+          <select id="subsubject-select">
+            <option value="">-- Select a sub-subject --</option>
+            <option value="Algebra">Algebra</option>
+            <option value="Geometry">Geometry</option>
+            <option value="Statistics-Advanced">Statistics Advanced</option>
+            <option value="Econometrics">Econometrics</option>
+            <!-- You can add more sub-subjects as needed -->
+          </select>
+        </div>
+        <button type="submit" class="btn">Add Todo</button>
+      </form>
+      <ul id="todo-list"></ul>
 
+      <hr />
+      <div id="timer-container">
+        <h2>Study Timer</h2>
+        <div class="form-group">
+          <label for="timer-duration">Set Timer (in minutes):</label>
+          <input type="number" id="timer-duration" min="1" value="25" />
+        </div>
+        <button id="start-timer" class="btn">Start Timer</button>
+        <p id="timer-display">00:00</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
